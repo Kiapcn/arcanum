@@ -1,47 +1,77 @@
-# Astro Starter Kit: Minimal
+# Arcanum-Lotos
 
-```sh
-npm create astro@latest -- --template minimal
+**Le créateur d'univers numériques intelligents**
+
+---
+
+## Présentation
+Arcanum-Lotos est un site vitrine moderne pour un créateur indépendant de solutions digitales élégantes, mystérieuses et optimisées. Le storytelling s'articule autour de l'alchimie digitale : transformer les idées en expériences numériques performantes grâce à la synergie du code, du design, du SEO et de l'IA.
+
+---
+
+## Stack technique
+- **Astro 5** : Framework principal, ultra-rapide, orienté contenu statique et dynamique.
+- **Tailwind CSS** : Pour un design moderne, responsive et facilement personnalisable.
+- **@astrojs/mdx** : Pour intégrer du contenu Markdown/MDX dans le site.
+- **@astrojs/sitemap** : Génération automatique du sitemap pour le SEO.
+- **@astrojs/vercel** : Déploiement optimisé sur Vercel (adapter officiel).
+- **GSAP** : Animations fluides et élégantes.
+- **Supabase JS** : (optionnel) Pour la gestion de données et d'API si besoin.
+
+---
+
+## Structure du projet
+
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
-├── public/
+├── public/                # Images, favicon, ressources statiques
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/        # Composants réutilisables (Header, Footer, Sidebar)
+│   ├── layouts/           # Layout principal du site
+│   ├── pages/             # Pages du site (index, blog, services, contact, etc.)
+│   └── lib/               # (optionnel) Fonctions utilitaires, ex: supabase.ts
+├── astro.config.mjs       # Configuration Astro et intégrations
+├── tailwind.config.mjs    # Configuration Tailwind CSS
+├── package.json           # Dépendances et scripts
+└── README.md              # Ce fichier
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Pages principales
+- **Accueil** : Présentation, storytelling, call-to-action
+- **Réalisations** : Portfolio de projets (à compléter)
+- **Services** : Détail des offres (SEO, automatisation, IA, etc.)
+- **Blog** : "Le Livre d'Arcanum" (SEO, guides, astuces)
+- **Contact** : Formulaire ou lien de contact
 
-Any static assets, like images, can be placed in the `public/` directory.
+---
 
-## 🧞 Commands
+## Commandes utiles
 
-All commands are run from the root of the project, from a terminal:
+- `npm install` : Installer les dépendances
+- `npm run dev` : Lancer le serveur de développement (http://localhost:4321)
+- `npm run build` : Générer le site pour la production
+- `npm run preview` : Prévisualiser le build localement
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+## Déploiement
+Le projet est prêt pour un déploiement sur [Vercel](https://vercel.com) (configuration automatique via l'adapter officiel).
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+## Personnalisation
+- **Couleurs** : Palette sombre, or doux, ivoire, lotus (voir `tailwind.config.mjs`)
+- **Typographies** : Titres en Playfair Display (serif), textes en Inter (sans-serif)
+- **Logo** : Lotus stylisé (à placer dans `/public`)
+
+---
+
+## Auteur
+Kiapcn – Créateur indépendant dans le Var
+
+---
+
+## Licence
+Projet open-source, libre de réutilisation et d'inspiration.
