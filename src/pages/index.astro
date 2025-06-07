@@ -1,16 +1,196 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import { Image } from '@astrojs/image/components';
 
+const features = [
+  {
+    icon: '🤖',
+    title: 'Intelligence Artificielle',
+    description: 'Intégration d\'IA pour des solutions innovantes et personnalisées'
+  },
+  {
+    icon: '🔍',
+    title: 'SEO Optimisé',
+    description: 'Visibilité maximale sur les moteurs de recherche'
+  },
+  {
+    icon: '💻',
+    title: 'Sites Vitrines',
+    description: 'Présence digitale élégante et performante'
+  },
+  {
+    icon: '⚡',
+    title: 'Automatisation',
+    description: 'Solutions backends efficaces et évolutives'
+  }
+];
+
+const testimonials = [
+  {
+    quote: "Une transformation digitale exceptionnelle qui a révolutionné notre présence en ligne.",
+    author: "Marie L.",
+    role: "Artisan d'art"
+  },
+  {
+    quote: "Un partenaire de confiance qui comprend parfaitement nos besoins.",
+    author: "Thomas D.",
+    role: "Entrepreneur"
+  }
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+  title="Accueil"
+  description="Arcanum-Lotos - Créateur d'univers numériques intelligents. Sites web, outils et automations avec une touche d'élégance et de mystère."
+>
+  <!-- Hero Section -->
+  <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-arcanum-dark/80 to-arcanum-dark z-10"></div>
+    <div class="container mx-auto px-4 relative z-20 text-center">
+      <h1 class="text-4xl md:text-6xl font-serif text-arcanum-gold mb-6 animate-fade-in">
+        Je tisse des expériences numériques sur mesure
+      </h1>
+      <p class="text-xl md:text-2xl text-arcanum-ivory/80 mb-8 max-w-2xl mx-auto">
+        Créateur d'univers numériques intelligents, je transforme vos idées en présence digitale performante.
+      </p>
+      <a
+        href="/services"
+        class="inline-block px-8 py-4 bg-arcanum-gold text-arcanum-dark rounded-lg text-lg font-medium hover:bg-arcanum-gold/80 transition-colors"
+      >
+        Découvrir mes formules
+      </a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20 bg-arcanum-gray/50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-serif text-arcanum-gold text-center mb-12">
+        L'alchimiste du digital
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {features.map((feature) => (
+          <div class="p-6 bg-arcanum-gray/50 rounded-lg border border-arcanum-gold/20 hover:border-arcanum-gold/40 transition-colors">
+            <div class="text-4xl mb-4">{feature.icon}</div>
+            <h3 class="text-xl font-serif text-arcanum-gold mb-2">{feature.title}</h3>
+            <p class="text-arcanum-ivory/80">{feature.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-serif text-arcanum-gold text-center mb-12">
+        Mes formules
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <a href="/services/vitrine-eclairee" class="group">
+          <div class="p-6 bg-arcanum-gray/50 rounded-lg border border-arcanum-gold/20 hover:border-arcanum-gold/40 transition-all duration-300">
+            <h3 class="text-2xl font-serif text-arcanum-gold mb-4 group-hover:text-arcanum-lotus transition-colors">
+              ✨ Vitrine Éclairée
+            </h3>
+            <p class="text-arcanum-ivory/80 mb-4">
+              Site vitrine optimisé SEO pour une présence digitale élégante et performante.
+            </p>
+            <span class="text-arcanum-gold group-hover:text-arcanum-lotus transition-colors">
+              En savoir plus →
+            </span>
+          </div>
+        </a>
+        <a href="/services/automata" class="group">
+          <div class="p-6 bg-arcanum-gray/50 rounded-lg border border-arcanum-gold/20 hover:border-arcanum-gold/40 transition-all duration-300">
+            <h3 class="text-2xl font-serif text-arcanum-gold mb-4 group-hover:text-arcanum-lotus transition-colors">
+              🔁 Automata
+            </h3>
+            <p class="text-arcanum-ivory/80 mb-4">
+              Backends automatisés pour optimiser vos processus et gagner en efficacité.
+            </p>
+            <span class="text-arcanum-gold group-hover:text-arcanum-lotus transition-colors">
+              En savoir plus →
+            </span>
+          </div>
+        </a>
+        <a href="/services/codex-ia" class="group">
+          <div class="p-6 bg-arcanum-gray/50 rounded-lg border border-arcanum-gold/20 hover:border-arcanum-gold/40 transition-all duration-300">
+            <h3 class="text-2xl font-serif text-arcanum-gold mb-4 group-hover:text-arcanum-lotus transition-colors">
+              🤖 Codex IA
+            </h3>
+            <p class="text-arcanum-ivory/80 mb-4">
+              Solutions IA personnalisées pour automatiser et optimiser vos tâches.
+            </p>
+            <span class="text-arcanum-gold group-hover:text-arcanum-lotus transition-colors">
+              En savoir plus →
+            </span>
+          </div>
+        </a>
+      </div>
+      <div class="text-center mt-12">
+        <a
+          href="/services"
+          class="inline-block px-6 py-3 border border-arcanum-gold text-arcanum-gold rounded-lg hover:bg-arcanum-gold/10 transition-colors"
+        >
+          Voir toutes les formules
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 bg-arcanum-gray/50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-serif text-arcanum-gold text-center mb-12">
+        Ils m'ont fait confiance
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {testimonials.map((testimonial) => (
+          <div class="p-6 bg-arcanum-gray/50 rounded-lg border border-arcanum-gold/20">
+            <p class="text-arcanum-ivory/80 italic mb-4">"{testimonial.quote}"</p>
+            <div>
+              <p class="font-medium text-arcanum-gold">{testimonial.author}</p>
+              <p class="text-sm text-arcanum-ivory/60">{testimonial.role}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-serif text-arcanum-gold mb-6">
+        Prêt à transformer votre présence digitale ?
+      </h2>
+      <p class="text-xl text-arcanum-ivory/80 mb-8 max-w-2xl mx-auto">
+        Discutons de votre projet et voyons comment je peux vous aider à créer une expérience numérique unique.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block px-8 py-4 bg-arcanum-gold text-arcanum-dark rounded-lg text-lg font-medium hover:bg-arcanum-gold/80 transition-colors"
+      >
+        Contactez-moi
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+</style>
